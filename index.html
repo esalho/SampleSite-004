@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LiirumLaarum Pimpelipom – HTML ja CSS rimpula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Esimerkki siitä kuinka pitkälle voi päästä pelkästään HTML:n ja CSS:n yhdistelmällä."
+    />
+    <meta name="author" content="Emma" />
+    <!-- <link rel="canonical" href="https://example.com/"> -->
+
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#f6f5ff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0d0b1f"
+      media="(prefers-color-scheme: dark)"
+    />
+    <!-- Pelkällä koodilla voi piirtää kuvia. Tämä on taas hieman haastava esimerkki, mutta on hyvä tietää mahdollisuuksista.
+     On myös ohjelmia, jotka generoivat koodin piirroksen pohjalta esim. https://editsvgcode.com/ -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%237c5cff'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%2300d4c8'/%3E%3C/svg%3E"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="LiirumLaarum Pimpelipom – HTML ja CSS rimpula"
+    />
+    <meta
+      property="og:description"
+      content="Esimerkki siitä kuinka pitkälle voi päästä pelkästään HTML:n ja CSS:n yhdistelmällä."
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Skip link: Näppäimistöllä voi hypätä suoraan ns. pääsisältöön. -->
+    <a class="skip-link" href="#main">Siirry pääsisältöön</a>
+
+    <header class="site-header">
+      <div class="wrapper site-header__inner">
+        <a class="brand" href="#top"
+          >Liirum<span>Laarum</span> Pimpeli<span>pom</span></a
+        >
+
+        <!-- aria-label kertoo ruudunlukuohjelmalle, että kyseessä on päänavigaatio -->
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#features">Ominaisuuksia</a></li>
+            <li><a href="#showcase">Koodia</a></li>
+            <li><a href="#contact">Lomake</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero wrapper" id="top" aria-labelledby="hero-title">
+        <div class="hero__text">
+          <p class="eyebrow">Tähän <i>kolme</i> jotain juttua</p>
+          <h1 id="hero-title">
+            Pakollinen <span class="gradient-text">gradientti</span>, koska
+            miksi ei?
+          </h1>
+          <p class="lead">
+            Jotain hömpänpömppää ja pöhinää <i>SAAS</i>-himmelistä vaikka. Tämä
+            on oikeasti aika kompleksi esimerkki, mutta sitä ei kannata
+            pelästyä.
+          </p>
+          <div class="actions">
+            <a class="button" href="#features">Ominaisuudet</a>
+            <a class="button button--ghost" href="#showcase">Koodia</a>
+          </div>
+        </div>
+
+        <!-- Koristeelliset elementit voidaan "piilottaa" ruudunlukuohjelmilta -->
+        <div class="hero__art" aria-hidden="true"></div>
+      </section>
+
+      <section
+        class="section wrapper"
+        id="features"
+        aria-labelledby="features-title"
+      >
+        <header class="section__head">
+          <h2 id="features-title">Muutama sananen</h2>
+          <p>
+            Tässä esimerkissä on käytetty muutamaa ihan käyttökelpoista kikkaa,
+            jotka kannattaa kokeilla ottaa käyttöön omassa projektissa. Pitää
+            kuitenkin muistaa, että on helmpompi aloittaa yksinkertaisesta ja
+            lisätä koristeellisuutta pikkuhiljaa.
+          </p>
+        </header>
+
+        <ul class="cards">
+          <li>
+            <article class="card">
+              <h3>Ei kuvia</h3>
+              <p>
+                Onneksi nykyään CSS:n kanssa saa askarreltua visuaalisesti
+                kivoja sivustoja näppärällä ranneliikkeellä eikä tarvitse painia
+                Photoshopin parissa montaa tuntia.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>Responsiivisuus</h3>
+              <p>
+                CSS Grid ja <code>clamp()</code> voivat olla aluksi hämmentäviä
+                ja hankalia toteuttaa alusta asti itse, mutta niitä oppii
+                ymmärtämään esimerkkien ja omien projektien kautta.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>Väriteema</h3>
+              <p>
+                Sivusto vaihtaa väriteemaa riippuen käyttöjärjestelmän
+                asetuksista. Yleensä kannattaa kuitenkin antaa asiakkaan päättää
+                kumpaa väriteemaa hän haluaa käyttää.
+              </p>
+            </article>
+          </li>
+          <li>
+            <article class="card">
+              <h3>Saavutettavuus</h3>
+              <p>
+                Semanttinen HTML sekä selkeä elementtien tyylitys tekevät
+                sivusta käytettävän myös niille, jotka käyttävät esimerkiksi
+                ruudunlukuohjelmia.
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="section wrapper showcase"
+        id="showcase"
+        aria-labelledby="showcase-title"
+      >
+        <div class="showcase__text">
+          <h2 id="showcase-title">Hieman kikkailua</h2>
+          <p>
+            Ihan kaikkeen CSS ei vielä pysty, mutta pienellä säätämisellä
+            saadaan myös gradientti reunuksille. Yksi konsti on käyttää kahta
+            taustaa, joista leikataan clipping mask -tyylisesti näkyväksi vain
+            pieni osa, jolloin lopputulos näyttää siltä, että
+            <code>border</code> on väritetty gradientilla.
+          </p>
+          <p>Yläpuolella olevat <i>kortit</i> demonstroivat tätä kikkaa.</p>
+        </div>
+
+        <figure class="window">
+          <div class="window__bar" aria-hidden="true"></div>
+          <pre tabindex="0"><code>.card {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+    linear-gradient(135deg, pink, purple, teal) border-box;
+}</code></pre>
+          <figcaption>
+            MacOS tyylinen ikkuna on toteutettu myös CSS:llä käyttäen
+            <code>::before</code> ja <code>box-shadow</code> tyylittelyä.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section
+        class="section wrapper contact"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <header class="section__head">
+          <h2 id="contact-title">Hieno lomake</h2>
+          <p>
+            Tässä hyödynnetään <code>label</code>, <code>type</code> ja
+            <code>autocomplete</code> attribuutteja, jotta lomake on helpompi
+            täyttää. Esimerkiksi Email-kentässä on löyhä validaatio, joka
+            tarkistaa että syötetty teksti on oikein formatoitu.
+          </p>
+        </header>
+
+        <form class="form" action="#" method="get">
+          <div class="field">
+            <label for="name">Nimi</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="field field--wide">
+            <label for="message">Viesti</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="button" type="submit">Lähetä</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper site-footer__inner">
+        <p>&copy; 2026 LiirumLaarum Pimpelipom</p>
+        <nav aria-label="Footer">
+          <a href="#top">Takaisin ylös</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
